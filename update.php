@@ -1,4 +1,4 @@
-$sql = "UPDATE  db_produk_forging 
+			$sql = "UPDATE  db_produk_forging 
 					SET (nama_produk			='$nama_produk',
 					model 					='$model',
 					part_no_produk_forging			='$part_no_produk_forging',
@@ -16,5 +16,5 @@ $sql = "UPDATE  db_produk_forging
 					line_fg_04				='$type_forging_optional_3',
 					line_fg_05				='$type_forging_optional_4',
 					ct_pro 					='$ct_pro',
-					forecast_pro				='$forecast_pro',
+					forecast_pro				='$forecast_pro'
 				WHERE 	kode_produk 				='$id_produk_forging'";
