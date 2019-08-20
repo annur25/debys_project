@@ -64,7 +64,9 @@ echo $forecast_pro.'<br>';
 -- // 					line_fg_05				='$type_forging_optional_4',
 -- // 					ct_pro 					='$ct_pro',
 -- // 					forecast_pro			='$forecast_pro'
-// 			WHERE 	kode_produk 			='$id_produk_forging'";
+			WHERE 	id_produk_forging 			='$id_produk_forging'";
+                //Sesuain nama field didatabase = sesuain nama variabel diatas.
+
 
 
 
