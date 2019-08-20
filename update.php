@@ -22,25 +22,25 @@
 		$id_produk_forging = $_POST["kode_produk"];
 
 
-echo $id_produk_forging.'<br>';
-echo $nama_produk.'<br>';
-echo $model.'<br>';
-echo $part_no_produk_forging.'<br>';
-echo $customer.'<br>';
-echo $status_produk.'<br>';
-echo $sp_mat_pro.'<br>';
-echo $dim_mat_pro.'<br>';
-echo $berat_mat.'<br>';
-echo $berat_pro.'<br>';
-echo $yield_pro.'<br>';
-echo $list_type_forging.'<br>';
-echo $type_forging_default.'<br>';
-echo $type_forging_optional_1.'<br>';
-echo $type_forging_optional_2.'<br>';
-echo $type_forging_optional_3.'<br>';
-echo $type_forging_optional_4.'<br>';
-echo $ct_pro.'<br>';
-echo $forecast_pro.'<br>';
+// echo $id_produk_forging.'<br>';
+// echo $nama_produk.'<br>';
+// echo $model.'<br>';
+// echo $part_no_produk_forging.'<br>';
+// echo $customer.'<br>';
+// echo $status_produk.'<br>';
+// echo $sp_mat_pro.'<br>';
+// echo $dim_mat_pro.'<br>';
+// echo $berat_mat.'<br>';
+// echo $berat_pro.'<br>';
+// echo $yield_pro.'<br>';
+// echo $list_type_forging.'<br>';
+// echo $type_forging_default.'<br>';
+// echo $type_forging_optional_1.'<br>';
+// echo $type_forging_optional_2.'<br>';
+// echo $type_forging_optional_3.'<br>';
+// echo $type_forging_optional_4.'<br>';
+// echo $ct_pro.'<br>';
+// echo $forecast_pro.'<br>';
 
 
 // 	// query sql
@@ -69,10 +69,15 @@ echo $forecast_pro.'<br>';
                 
 $query = mysqli_query($koneksi, $sql);
 
-	if($query){
-		echo "Data berhasil dirubah!";
-	} else {
-		echo "Data gagal dirubah!";
+		if($query) {
+			$_SESSION['type'] = 'success';
+			$_SESSION["message"] = 'Selamat, produk berhasil ditambahkan.';
+		} else {
+			$_SESSION['type'] = 'danger';
+			$_SESSION["message"] = 'Maaf, produk gagal ditambahakan';
+		}
 	}
+	header("location:tambah_pro_forging.php");
+	// exit();
 
 ?>
